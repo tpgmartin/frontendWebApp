@@ -31,7 +31,7 @@ Book.loadAll = function () {
   }
 };
 
-Books.saveAll = function () {
+Book.saveAll = function () {
   var bookString = "", error = false, nmrOfBooks = Object.keys(Book.instances).length;
   try {
     bookString = JSON.stringify(Book.instances);
@@ -45,7 +45,7 @@ Books.saveAll = function () {
   }
 };
 
-Books.create = function (slots) {
+Book.create = function (slots) {
   var book = new Book(slots);
   Book.instances[slots.isbn] = book;
   console.log("Book " + slots.isbn + " created!");
